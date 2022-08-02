@@ -1,0 +1,42 @@
+table, th, td {
+    border: 1px solid;
+   
+  }
+  th {
+    height: 50px;
+    background-color :aquamarine
+  }
+  table{
+    width: 100%;
+  }
+  td {
+    text-align: center;
+  }
+  th, td {
+    padding: 15px;
+    text-align: left;
+  }
+  tr:hover {background-color: aquamarine;}
+
+  form{
+    text-align:center;
+    width : 50%;
+    background-color:bisque;
+    border : 2px black;
+    border-style: solid;
+    margin-left:25%;
+  }
+
+  button{
+    size : 70mm;
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    text-align: center;
+    margin-left : 30%;
+    margin-top:5%;
+}

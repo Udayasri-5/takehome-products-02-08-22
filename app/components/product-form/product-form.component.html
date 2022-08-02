@@ -1,0 +1,88 @@
+<hr> 
+        <button class="btn btn-info" style="margin-left:40%"(click)="backtoHome()" >Back to Produts</button>
+        &nbsp;
+<form #productForm="ngForm" (ngSubmit)="onSubmit(productForm)"> 
+    &nbsp;
+   <div class="row">
+    <h1> <div class="col-sm-3"><label>Details Form</label></div> </h1>
+       
+   </div>
+   &nbsp;
+        
+   <div class="row">
+       <div class="col-sm-3"><label>Product ID</label></div>
+       <div class="col-sm-6"><input type="text" name="productID" [(ngModel)]="product.productID"/></div>
+   </div>
+   &nbsp;
+   <div class="row">
+       <div class="col-sm-3"><label>Product Name</label></div>
+       <div class="col-sm-6"><input type="text" name="productName" [(ngModel)]="product.productName"/></div>
+   </div>
+   &nbsp;
+   <div class="row">
+       <div class="col-sm-3"><label>Product Description</label></div>
+       <div class="col-sm-6"><input type="text" name="productDescription" [(ngModel)]="product.productDescription"/></div>
+   </div>
+   &nbsp;
+   <div class="row">
+       <div class="col-sm-3"><label>Unit Price</label></div>
+       <div class="col-sm-6"><input type="text" name="unitPrice" [(ngModel)]="product.unitPrice"/></div>
+   </div>
+   &nbsp;
+   <div class="row">
+       <div class="col-sm-3"><label>Image URL </label></div>
+       <div class="col-sm-6"><input type="text" name="imageURL" [(ngModel)]="product.imageURL"/></div>
+   </div>
+   &nbsp;
+   <div class="row">
+       <div class="col-sm-3"><label>Active Bit</label></div>
+       <div class="col-sm-6"><input type="text" name="activeBit" [(ngModel)]="product.activeBit"/></div>
+   </div>
+   &nbsp;
+   <div class="row">
+       <div class="col-sm-3"><label>Units in stock</label></div>
+       <div class="col-sm-6"><input type="text" name="unitsInStock" [(ngModel)]="product.unitsInStock"/></div>
+   </div>
+   &nbsp;
+   <div class="row">
+       <div class="col-sm-3"><label>Date Created</label></div>
+       <div class="col-sm-6"><input type="date" name="dateCreated" [(ngModel)]="product.dateCreated"/></div>
+   </div>
+   &nbsp;
+   <div class="row">
+       <div class="col-sm-3"><label>last Updated</label></div>
+       <div class="col-sm-6"><input type="date" name="lastUpdated" [(ngModel)]="product.lastUpdated"/></div>
+   </div>
+  
+   &nbsp;
+   <div class="row">
+       <div class="col-sm-3"><label>Category ID</label></div>
+       <div class="col-sm-6">
+        <select name="category" [(ngModel)] ="product.categoryID">
+            <option>Select</option>
+            <option *ngFor="let cat of category" value="{{cat.categoryID}}">{{cat.categoryName}}</option>
+        </select>
+        </div>
+   </div>
+   &nbsp;
+   <div class="row">
+       <div class="col-sm-3"><label>SKU</label></div>
+       <div class="col-sm-6"><input type="text" name="SKU" [(ngModel)]="product.sku"/></div>
+   </div>
+   &nbsp;
+
+   &nbsp;
+
+   
+   <div class="row">
+        
+    <div class="col-sm-3">
+        <input style="background-color:greenyellow;height:50px;width:80px"type="submit" name="submit" value="submit" class="btn btn-primary"/></div>
+    &nbsp;
+        <div class="col-sm-3">
+            <input style="background-color:greenyellow;height:50px;width:80px"type="reset" name="reset" value="Reset" class="btn btn-primary"/></div>
+</div>
+&nbsp;
+</form>
+
+

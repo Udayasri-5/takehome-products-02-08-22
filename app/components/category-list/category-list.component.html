@@ -1,0 +1,55 @@
+     
+<div class="container">
+
+    <div class="row">
+        <div class="column">
+            <div class="card">
+        <button class="btn btn-info" style="margin-top:10px" (click)="addCategory()" >Add Product</button> </div>
+          </div>
+        <div class="column">
+            <div class="card">
+                 <!--
+        <form #serachform="ngForm" (ngSubmit)="getProductByName()" style="margin-top:10px;width:300px">
+           <input class="form-control" type="search" name="searchByName" [(ngModel)] ="searchByName">
+            <input type="submit" name="submit" value="Search" class="btn btn-info">
+        </form> -->
+          </div> 
+        </div>
+        <div class="column">
+           <div class="card">
+          <button class="btn btn-info" style="margin-top:10px"(click)="backtoHome()" >Back to Home</button>
+             </div>   
+       
+    </div>
+        
+
+<table class="table table-bordered table-info table-striped   table-hover">
+  
+
+    <tr>
+        <th>Categpry ID</th>
+        <th> Category name</th>
+        
+    </tr>
+
+    <tr *ngFor="let category of productCategories">
+    <td>{{category.categoryID}}</td>
+    <td>{{category.categoryName}}</td>
+
+    <td> 
+        <button type="submit" class="btn btn-info" style="background-color: rgb(5, 215, 15);" (click)="updateCategory(category.categoryID)"> Update </button>
+    </td>
+    <td> 
+        <button type="submit" class="btn btn-info" (click)="deleteCategory(category.categoryID)"> Delete </button>
+    </td>
+
+     </tr>
+</table>
+</div>
+
+
+
+
+
+
+

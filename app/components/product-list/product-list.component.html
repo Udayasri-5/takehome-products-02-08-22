@@ -1,0 +1,69 @@
+
+<div class="container"></div>
+  <div class="row">
+    <div class="column">
+        <div class="card">
+    <button class="btn btn-info" style="margin-top:10px" (click)="addProduct()" >Add Product</button> </div>
+      </div>
+    <div class="column">
+        <div class="card">
+    <form #serachform="ngForm" (ngSubmit)="getProductByName()" style="margin-top:10px;width:300px">
+        <input class="form-control" type="search" name="searchByName" [(ngModel)] ="searchByName">
+        <input type="submit" name="submit" value="Search" class="btn btn-info">
+    </form>
+      </div> 
+    </div>
+    <div class="column">
+       <div class="card">
+      <button class="btn btn-info" style="margin-top:10px"(click)="backtoHome()" >Back to Home</button>
+         </div>   
+   
+</div>
+    
+</div>
+
+<table class="table table-bordered table-info table-striped   table-hover">
+  
+    <tr>
+
+        <th>Product ID</th>
+        <th> Product name</th>
+        <th>Product Description</th>
+        <th>Unit Price</th>
+        <th>Image URL</th>
+        <th>Active Bit</th>
+        <th>Units in Stock</th>
+        <th>Date Created</th>
+        <th>Last Updated</th>
+        <th>Category ID</th>
+    </tr>
+
+    <tr *ngFor="let product of products" [ngClass]="{'metaQuote':product.unitPrice>=20000,
+    'nonMetaQuote':product.unitPrice<20000}">
+    <td>{{product.productID}}</td>
+    <td>{{product.productName}}</td>
+    <td>{{product.productDescription}}</td>
+    <td>{{product.unitPrice}}</td>
+    <td><img src={{product.imageURL}}> </td>
+    <td>{{product.activeBit}}</td>
+    <td>{{product.unitsInStock}}</td>
+    <td>{{product.dateCreated}}</td>
+    <td>{{product.lastUpdated}}</td>
+    <td>{{product.categoryID}}</td>
+    <td> 
+        <button type="submit" class="btn btn-info" style="background-color: rgb(5, 215, 15);" (click)="updateProduct(product.productID)"> Update </button>
+    </td>
+    <td> 
+        <button type="submit" class="btn btn-info" (click)="deleteProduct(product.productID)"> Delete </button>
+    </td>
+
+     </tr>
+</table>
+
+
+
+
+
+
+
+
